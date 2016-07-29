@@ -15,7 +15,7 @@ fi
 read -p "You really want to dump remote database? [Y/n]: " option
 
 if [[ "$option" =~ ^[yY]$ ]]; then
-    cmd=`cat cmd.sh | sed 's,#!/bin/bash,,'`
+    cmd=`cat remote_command.sh | sed 's,#!/bin/bash,,'`
     echo -e "\e[38;5;82m[+]\e[0m performing remote command: \e[38;5;222m${cmd}\e[0m\n\n"
     echo -e "\e[38;5;82mssh-ing to ec2-user@$STAGING_IP\e[0m"
     
